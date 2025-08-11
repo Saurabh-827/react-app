@@ -1,26 +1,29 @@
 import { useState } from "react";
 import Alert from "./components/Alert";
 import Buttons from "./components/Buttons";
+import NewListGroup from "./components/StyleListGroup/NewListGroup";
+import "./App.css";
 // import ListGroup from "./components/ListGroup";
 function App() {
-	// let items = ["New York", "London", "Delhi", "Paris", "Dubai", "Basti"];
+	let items = ["New York", "London", "Delhi", "Paris", "Dubai", "Basti"];
 	// const handleSelectItem = (item: string) => {
 	// 	console.log(item);
 	// };
 	const [alertVisible, setAlertVisiblity] = useState(false);
 	return (
 		<div>
+			<NewListGroup heading="Cities" items={items}></NewListGroup>
 			{/* <ListGroup
 				items={items}
 				heading="Cities"
 				onSelectItem={handleSelectItem}
 			/> */}
-			{alertVisible && (
+			{/* {alertVisible && (
 				<Alert onClose={() => setAlertVisiblity(false)}>My Alert</Alert>
-			)}
-			<Buttons color="danger" onClick={() => setAlertVisiblity(true)}>
+			)} */}
+			{/* <Buttons color="danger" onClick={() => setAlertVisiblity(true)}>
 				WOW
-			</Buttons>
+			</Buttons> */}
 		</div>
 	);
 }
