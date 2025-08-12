@@ -1,18 +1,22 @@
-import { useState } from "react";
-import Alert from "./components/Alert";
-import Buttons from "./components/Buttons";
+// import { useState } from "react";
+// import Alert from "./components/Alert";
+// import Buttons from "./components/Buttons";
 import NewListGroup from "./components/StyleListGroup/NewListGroup";
 import "./App.css";
 // import ListGroup from "./components/ListGroup";
 function App() {
 	let items = ["New York", "London", "Delhi", "Paris", "Dubai", "Basti"];
-	// const handleSelectItem = (item: string) => {
-	// 	console.log(item);
-	// };
-	const [alertVisible, setAlertVisiblity] = useState(false);
+	const handleSelectItem = (item: string) => {
+		console.log(item);
+	};
+	// const [alertVisible, setAlertVisiblity] = useState(false);
 	return (
 		<div>
-			<NewListGroup heading="Cities" items={items}></NewListGroup>
+			<NewListGroup
+				heading="Cities"
+				items={items}
+				onSelectItem={handleSelectItem}
+			></NewListGroup>
 			{/* <ListGroup
 				items={items}
 				heading="Cities"
