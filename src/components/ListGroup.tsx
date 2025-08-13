@@ -19,7 +19,9 @@ function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
 	return (
 		// You can use a <div> or a <Fragment> or <></> for returning multiple points
 		<>
-			<h1>{heading}</h1>
+			<h1 style={{ backgroundColor: "greenyellow" }}>{heading}</h1>
+			{/* Inline css but it is considered as the bad practice
+			 */}
 			{
 				/* {if (condition) {}}  we cant use statements in jsx we can only use expressions (variables,function calls, operators, Araay methods, Object property access) in the jsx*/
 				// items.length === 0 ? <p>No Item Found</p> : null

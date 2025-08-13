@@ -3,7 +3,7 @@
 // import Buttons from "./components/Buttons";
 import NewListGroup from "./components/StyleListGroup/NewListGroup";
 import "./App.css";
-// import ListGroup from "./components/ListGroup";
+import ListGroup from "./components/ListGroup";
 function App() {
 	let items = ["New York", "London", "Delhi", "Paris", "Dubai", "Basti"];
 	const handleSelectItem = (item: string) => {
@@ -17,11 +17,11 @@ function App() {
 				items={items}
 				onSelectItem={handleSelectItem}
 			></NewListGroup>
-			{/* <ListGroup
+			<ListGroup
 				items={items}
 				heading="Cities"
 				onSelectItem={handleSelectItem}
-			/> */}
+			/>
 			{/* {alertVisible && (
 				<Alert onClose={() => setAlertVisiblity(false)}>My Alert</Alert>
 			)} */}
